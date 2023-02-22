@@ -9,17 +9,12 @@
   "homepage": "https://viclafouch.github.io/mui-color-input/",
   "version": "1.0.5",
   "files": [
+    "src",
     "dist"
   ],
-  "main": "./dist/mui-color-input.umd.js",
-  "module": "./dist/mui-color-input.es.js",
-  "types": "./dist/index.d.ts",
-  "exports": {
-    ".": {
-      "import": "./dist/mui-color-input.es.js",
-      "require": "./dist/mui-color-input.umd.js"
-    }
-  },
+  "main": "src/index.tsx",
+  "module": "src/index.tsx",
+  "types": "src/index.types.ts",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/viclafouch/mui-color-input.git"
