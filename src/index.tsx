@@ -1,21 +1,20 @@
 import React from "react";
 import InputAdornment from "@mui/material/InputAdornment";
-import type { PopoverProps } from "@mui/material/Popover";
-import ColorButton from "@components/ColorButton/ColorButton";
-import ColorPopover from "@components/ColorPopover/ColorPopover";
-import ColorPopoverBody from "@components/ColorPopoverBody/ColorPopoverBody";
-import ColorTextField from "@components/ColorTextField/ColorTextField";
-import AlphaSlider from "@components/AlphaSlider/AlphaSlider";
-import ColorSpace from "@components/ColorSpace/ColorSpace";
-import HueSlider from "@components/HueSlider/HueSlider";
 import { TinyColor } from "@ctrl/tinycolor";
-import { COLOR_FALLBACK, FORMAT_FALLBACK } from "@shared/constants/fallback";
+import ColorButton from "./components/ColorButton/ColorButton";
+import ColorPopover from "./components/ColorPopover/ColorPopover";
+import ColorPopoverBody from "./components/ColorPopoverBody/ColorPopoverBody";
+import ColorTextField from "./components/ColorTextField/ColorTextField";
+import AlphaSlider from "./components/AlphaSlider/AlphaSlider";
+import ColorSpace from "./components/ColorSpace/ColorSpace";
+import HueSlider from "./components/HueSlider/HueSlider";
+import { COLOR_FALLBACK, FORMAT_FALLBACK } from "./shared/constants/fallback";
 import {
   buildValueFromTinyColor,
   getSafeTinyColor,
   stringifyInputValue,
-} from "@shared/helpers/format";
-import { assocRefToPropRef } from "@shared/helpers/ref";
+} from "./shared/helpers/format";
+import { assocRefToPropRef } from "./shared/helpers/ref";
 
 import type {
   MuiColorPopoverProps,
@@ -105,9 +104,8 @@ const MuiColorInput = React.forwardRef(
       }
     };
 
-    const handleClose = (
-      ...args: Parameters<NonNullable<PopoverProps["onClose"]>>
-    ) => {
+    const handleClose = (...args: any) => {
+      // @ts-ignore
       onClose?.(...args);
       setAnchorEl(null);
       queueMicrotask(() => {
@@ -316,9 +314,8 @@ const MuiColorPopover = React.forwardRef((props: MuiColorPopoverProps) => {
     handleChange(newValue);
   };
 
-  const handleClose = (
-    ...args: Parameters<NonNullable<PopoverProps["onClose"]>>
-  ) => {
+  const handleClose = (...args: any) => {
+    // @ts-ignore
     onClose?.(...args);
     setTargetAnchorEl(null);
     queueMicrotask(() => {
