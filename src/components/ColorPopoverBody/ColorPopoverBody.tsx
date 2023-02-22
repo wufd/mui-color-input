@@ -8,10 +8,7 @@ import { HSV, Numberify, TinyColor } from "@ctrl/tinycolor";
 import { buildValueFromTinyColor } from "../../shared/helpers/format";
 import { clamp, matchIsNumber } from "../../shared/helpers/number";
 
-import type {
-  MuiColorInputFormat,
-  MuiColorInputProps,
-} from "../../index.types";
+import type { MuiColorInputFormat, MuiColorInputProps } from "../../types";
 
 type ColorPopoverBodyProps = {
   currentColor: TinyColor;

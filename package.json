@@ -9,11 +9,11 @@
   "homepage": "https://viclafouch.github.io/mui-color-input/",
   "version": "1.0.5",
   "files": [
+    "src",
     "src/index.tsx",
-    "src/index.types.ts"
+    "src/types.ts"
   ],
   "main": "src/index.tsx",
-  "types": "src/index.tsx",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/viclafouch/mui-color-input.git"

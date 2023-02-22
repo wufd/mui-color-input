@@ -1,10 +1,7 @@
 import { ColorInput, TinyColor, TinyColorOptions } from "@ctrl/tinycolor";
 import { matchIsString } from "../helpers/string";
 
-import type {
-  MuiColorInputFormat,
-  MuiColorInputValue,
-} from "../../index.types";
+import type { MuiColorInputFormat, MuiColorInputValue } from "../../types";
 
 export function buildValueFromTinyColor(
   tinyColor: TinyColor,

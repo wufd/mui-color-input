@@ -15,23 +15,13 @@ import {
   stringifyInputValue,
 } from "./shared/helpers/format";
 import { assocRefToPropRef } from "./shared/helpers/ref";
-
 import type {
   MuiColorPopoverProps,
   MuiColorInputColors,
   MuiColorInputFormat,
   MuiColorInputProps,
   MuiColorInputValue,
-} from "./index.types";
-
-export type {
-  MuiColorPopoverProps,
-  MuiColorInputFormat,
-  MuiColorInputProps,
-  MuiColorInputValue,
-  MuiColorInputColors,
-  TinyColor,
-};
+} from "./types";
 
 export function matchIsValidColor(color: MuiColorInputValue): boolean {
   return new TinyColor(color).isValid;
@@ -381,4 +371,10 @@ export {
   AlphaSlider,
   ColorSpace,
   HueSlider,
+  MuiColorPopoverProps,
+  MuiColorInputFormat,
+  MuiColorInputProps,
+  MuiColorInputValue,
+  MuiColorInputColors,
+  TinyColor,
 };
